@@ -6,37 +6,37 @@
 }
 
 body {
-  background: #0f172a;
-  color: #e2e8f0;
+  background: #020617;
+  color: white;
+  overflow-x: hidden;
 }
 
-.hero {
-  padding: 40px;
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+  z-index: -1;
 }
 
 .navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
+  padding: 20px 40px;
+  z-index: 10;
 }
 
-.logo {
-  font-weight: bold;
-}
-
-.nav-button {
-  text-decoration: none;
-  color: white;
-}
-
-.content {
+.hero {
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 40px;
 }
 
-.text {
-  max-width: 500px;
+.hero-content {
+  max-width: 600px;
 }
 
 h1 {
@@ -44,13 +44,20 @@ h1 {
   margin: 20px 0;
 }
 
-.subtitle {
-  margin-bottom: 20px;
+.panel {
+  padding: 100px 40px;
 }
 
-.actions a {
-  margin-right: 10px;
-  text-decoration: none;
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cards article {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .primary-button {
@@ -58,6 +65,7 @@ h1 {
   padding: 10px 20px;
   border-radius: 8px;
   color: white;
+  text-decoration: none;
 }
 
 .secondary-button {
@@ -65,40 +73,11 @@ h1 {
   padding: 10px 20px;
   border-radius: 8px;
   color: white;
-}
-
-.scene {
-  perspective: 800px;
-}
-
-.cube {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  transform-style: preserve-3d;
-  animation: rotate 5s infinite linear;
-}
-
-.cube span {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(99,102,241,0.5);
-  border: 1px solid #6366f1;
-  transform: rotateY(calc(90deg * var(--i))) translateZ(60px);
-}
-
-@keyframes rotate {
-  from { transform: rotateX(-20deg) rotateY(0deg); }
-  to { transform: rotateX(-20deg) rotateY(360deg); }
-}
-
-.info {
-  padding: 40px;
+  text-decoration: none;
 }
 
 footer {
-  padding: 20px;
+  padding: 40px;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.6;
 }
