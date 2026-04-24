@@ -7,47 +7,64 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="hero">
-    <nav class="navbar">
-      <div class="logo">3D Website</div>
+  <canvas id="webgl"></canvas>
+
+  <header class="navbar">
+    <a href="#" class="logo">3D Website</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
       <a href="#contact" class="nav-button">Contact</a>
     </nav>
+  </header>
 
-    <section class="content">
-      <div class="text">
-        <p class="eyebrow">Interactive web experience</p>
-        <h1>Build something that feels alive.</h1>
-        <p class="subtitle">
-          A clean starter website for your 3D project. Replace this text with your idea,
-          product, portfolio, or animation showcase.
-        </p>
-        <div class="actions">
-          <a href="#demo" class="primary-button">View Demo</a>
-          <a href="#about" class="secondary-button">Learn More</a>
-        </div>
-      </div>
-
-      <div class="scene" id="demo" aria-label="3D cube animation">
-        <div class="cube">
-          <span style="--i:0"></span>
-          <span style="--i:1"></span>
-          <span style="--i:2"></span>
-          <span style="--i:3"></span>
-        </div>
+  <main class="hero">
+    <section class="hero-content">
+      <p class="eyebrow">Real-time Three.js experience</p>
+      <h1>Interactive 3D websites that feel alive.</h1>
+      <p class="subtitle">
+        A modern starter landing page with a live 3D scene, animated objects,
+        responsive design, lighting, camera movement, and scroll-friendly content.
+      </p>
+      <div class="actions">
+        <a href="#features" class="primary-button">Explore Features</a>
+        <a href="#about" class="secondary-button">How it works</a>
       </div>
     </section>
   </main>
 
-  <section class="info" id="about">
-    <h2>Ready to customize</h2>
+  <section class="panel" id="features">
+    <p class="eyebrow">What is included</p>
+    <h2>Built for customization</h2>
+    <div class="cards">
+      <article>
+        <h3>Three.js scene</h3>
+        <p>Animated 3D shapes rendered directly in the browser.</p>
+      </article>
+      <article>
+        <h3>Responsive layout</h3>
+        <p>Looks good on desktop, tablet, and mobile screens.</p>
+      </article>
+      <article>
+        <h3>Easy upgrade path</h3>
+        <p>Replace the objects with GLB models, products, characters, or logos.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel about" id="about">
+    <p class="eyebrow">Next level</p>
+    <h2>Add your own 3D model</h2>
     <p>
-      Add your 3D model, animations, product visuals, or portfolio sections here.
-      This starter uses plain HTML and CSS, so it is easy to edit and publish.
+      This version uses animated geometry so it works immediately on GitHub Pages.
+      Later, you can add a real <strong>.glb</strong> model and load it with Three.js GLTFLoader.
     </p>
   </section>
 
   <footer id="contact">
-    <p>Made by Anthony · 2026</p>
+    <p>Made by Anthony · Powered by Three.js</p>
   </footer>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
